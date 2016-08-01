@@ -1,6 +1,6 @@
 #Pre-requisites
 The following should be installed along with proper PATH variable setup. Consult respective s/w setup document for details.
-For example,
+For example,<br>
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"<br>
 export PATH=${PATH}:${JAVA_HOME}/bin
 
@@ -9,7 +9,7 @@ export PATH=${PATH}:${JAVA_HOME}/bin
 - Latest Spark
 - IntelliJ Idea (Optional)
 
-# SparkApp
+# Build SparkApp
 $ mvn clean package
 
 # Use spark-submit to run your application
