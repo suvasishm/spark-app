@@ -1,3 +1,14 @@
+#Pre-requisites
+The following should be installed along with proper PATH variable setup. Consult respective s/w setup document for details.
+For example,
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export PATH=${PATH}:${JAVA_HOME}/bin
+
+- Java 1.8 or higher
+- Latest Maven
+- Latest Spark
+- IntelliJ Idea (Optional)
+
 # SparkApp
 $ mvn clean package
 
