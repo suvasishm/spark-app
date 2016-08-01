@@ -25,6 +25,7 @@
         </dependency>
     </dependencies>
 
+    <!-- Make sure we are using Java 1.8, otherwise we might get compilation error: lambda expressions are not supported in -source 1.5 -->
     <build>
         <plugins>
             <plugin>
