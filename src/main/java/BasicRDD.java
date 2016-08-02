@@ -32,7 +32,7 @@ public class BasicRDD {
         // 2. Create text file RDDs using SparkContext’s textFile method
         JavaRDD<String> distFile = jsc.textFile("/home/suvasish/IdeaProjects/SparkApp/src/main/resources/data.txt"); // distFile is merely a pointer to the file
         // Now distFile can be acted on by dataset operations
-        //printRDD(distFile);
+        printRDD(distFile);
 
         // The following defines lineLengths as the result of a map transformation
         JavaRDD<Integer> lineLengths = distFile.map(s -> s.length()); //lineLengths is not immediately computed, due to laziness
