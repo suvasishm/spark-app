@@ -1,7 +1,7 @@
 #Pre-requisites
 The following should be installed along with proper PATH variable setup. Consult respective s/w setup document for details.
-For example,<br>
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"<br>
+For example (Linux),<br />
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"<br />
 export PATH=${PATH}:${JAVA_HOME}/bin
 
 - Java 1.8 or higher
@@ -13,5 +13,5 @@ export PATH=${PATH}:${JAVA_HOME}/bin
 $ mvn clean package
 
 # Use spark-submit to run your application
-$ /path-to-spark-home/bin/spark-submit --class "SimpleApp" --master local[4] target/simple-spark-1.0-SNAPSHOT.jar
+$ /path-to-spark-home/bin/spark-submit --class "SimpleApp" --master local[4] target/simple-spark-1.0-SNAPSHOT.jar<br />
 $ /path-to-spark-home/bin/spark-submit --class "BasicRDD" --master local[4] target/simple-spark-1.0-SNAPSHOT.jar
