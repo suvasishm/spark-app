@@ -31,5 +31,5 @@ $ /path-to-spark-home/sbin/start-slave.sh <master-spark-URL>
 ######Once you have started a worker, look at the master’s web UI (http://localhost:8080 by default). You should see the new node listed there, along with its number of CPUs and memory (minus one gigabyte left for the OS).
 
 ### Submit application on standalone
-$ s/path-to-spark-home/bin/park-submit --class "SimpleApp" --master spark://suvasish-pc:6066 --deploy-mode "cluster" target/simple-spark-1.0-SNAPSHOT.jar
+$ /path-to-spark-home/bin/park-submit --class "SimpleApp" --master spark://suvasish-pc:6066 --deploy-mode "cluster" target/simple-spark-1.0-SNAPSHOT.jar
 
