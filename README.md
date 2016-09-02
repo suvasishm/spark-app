@@ -25,10 +25,10 @@ $ /path-to-spark-home/bin/spark-submit --class "BasicRDD" --master local[4] targ
 
 ### Start cluster manually
 $ /path-to-spark-home/sbin/start-master.sh
-- Once started, the master will print out a spark://HOST:PORT URL for itself, which you can use to connect workers to it, or pass as the “master” argument to SparkContext. You can also find this URL on the master’s web UI, which is http://localhost:8080 by default. <br />
+######Once started, the master will print out a spark://HOST:PORT URL for itself, which you can use to connect workers to it, or pass as the “master” argument to SparkContext. You can also find this URL on the master’s web UI, which is http://localhost:8080 by default. <br />
 
 $ /path-to-spark-home/sbin/start-slave.sh spark://suvasish-pc:7077
-- Once you have started a worker, look at the master’s web UI (http://localhost:8080 by default). You should see the new node listed there, along with its number of CPUs and memory (minus one gigabyte left for the OS).
+######Once you have started a worker, look at the master’s web UI (http://localhost:8080 by default). You should see the new node listed there, along with its number of CPUs and memory (minus one gigabyte left for the OS).
 
 ### Submit application on standalone
 $ s/path-to-spark-home/bin/park-submit --class "SimpleApp" --master spark://suvasish-pc:6066 --deploy-mode "cluster" target/simple-spark-1.0-SNAPSHOT.jar
