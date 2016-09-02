@@ -22,6 +22,7 @@ $ /path-to-spark-home/bin/spark-submit --class "BasicRDD" --master local[4] targ
 <hr />
 
 ## Run on Standalone(cluster manager) deploy mode
+sic http://spark.apache.org/docs/latest/spark-standalone.html
 
 ### Start cluster manually
 $ /path-to-spark-home/sbin/start-master.sh
