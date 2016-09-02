@@ -21,7 +21,7 @@ $ /path-to-spark-home/bin/spark-submit --class "BasicRDD" --master local[4] targ
 
 <hr />
 
-## Run on Standalone(cluster manager) deploy mode
+## Run on Standalone cluster
 sic http://spark.apache.org/docs/latest/spark-standalone.html
 
 ### Start cluster manually
@@ -34,3 +34,4 @@ $ /path-to-spark-home/sbin/start-slave.sh <master-spark-URL>
 ### Submit application on standalone
 $ /path-to-spark-home/bin/park-submit --class "SimpleApp" --master spark://suvasish-pc:6066 --deploy-mode "cluster" target/simple-spark-1.0-SNAPSHOT.jar
 
+<hr />
