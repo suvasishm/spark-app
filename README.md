@@ -48,7 +48,7 @@ $ export HADOOP_CONF_DIR=/path/to/hadoop/etc/hadoop
 $ start-dfs.sh <br />
 $ start-yarn.sh
 
-** Now upload the data.txt and ebay.csv into hdfs (for example within /user/suvasish) and update BasicRDD.java and SparkSql.java accordingly. Recomplile the project. <br />
+###### Now upload the data.txt and ebay.csv into hdfs (for example within /user/suvasish) and update BasicRDD.java and SparkSql.java accordingly. Recomplile the project. <br />
 e.g. <JavaRDD<String> distFile = jsc.textFile("hdfs://localhost:9000/user/suvasish/data.txt");> <br />
 $ hdfs dfs -mkdir /user/suvasish
 $ hdfs dfs -put /path/to/data.txt /user/suvasish/data.txt
