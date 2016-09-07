@@ -22,7 +22,7 @@ $ /path-to-spark-home/bin/spark-submit --class "BasicRDD" --master local[4] targ
 <hr />
 
 ## Run on Standalone cluster
-sic http://spark.apache.org/docs/latest/spark-standalone.html
+[1] http://spark.apache.org/docs/latest/spark-standalone.html
 
 ### Start cluster manually
 $ /path-to-spark-home/sbin/start-master.sh
@@ -37,9 +37,12 @@ $ /path-to-spark-home/bin/park-submit --class "SimpleApp" --master spark://suvas
 <hr />
 
 ## Run on YARN
-sic http://spark.apache.org/docs/latest/running-on-yarn.html
+[1] http://spark.apache.org/docs/latest/running-on-yarn.html
+[2] https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
+[3] https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/ClusterSetup.html
 
-### Set $HADOOP_CONF_DIR to /path/to/hadoop/etc/hadoop
+### Set $HADOOP_CONF_DIR
+$ export HADOOP_CONF_DIR=/path/to/hadoop/etc/hadoop
 
 ### Start HADOOP & YARN daemons
 $ start-dfs.sh
