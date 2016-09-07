@@ -30,7 +30,8 @@ public class BasicRDD {
         /* ========================================================================== */
 
         // 2. Create text file RDDs using SparkContext’s textFile method
-        JavaRDD<String> distFile = jsc.textFile("/home/suvasish/IdeaProjects/SparkApp/src/main/resources/data.txt"); // distFile is merely a pointer to the file
+        //JavaRDD<String> distFile = jsc.textFile("/home/suvasish/IdeaProjects/SparkApp/src/main/resources/data.txt"); // local mode
+        JavaRDD<String> distFile = jsc.textFile("hdfs://localhost:9000/user/suvasish/data.txt"); // cluster
         // Now distFile can be acted on by dataset operations
         printRDD(distFile);
 

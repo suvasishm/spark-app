@@ -21,7 +21,7 @@ public class SparkSql {
                 .getOrCreate();
 
         // DataFrame operations
-        Dataset<Row> df = spark.read().csv("/home/suvasish/IdeaProjects/SparkApp/src/main/resources/ebay.csv");
+        Dataset<Row> df = spark.read().csv("/user/suvasish/ebay.csv");
         df.show();
         System.out.println("#### ------------ >" + df.count());
         df.select(col("_c0"), col("_c8").plus(1)).show();
