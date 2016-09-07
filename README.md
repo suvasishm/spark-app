@@ -50,8 +50,8 @@ $ start-yarn.sh
 
 ###### Now upload the data.txt and ebay.csv into hdfs (for example within /user/suvasish) and update BasicRDD.java and SparkSql.java accordingly. Recomplile the project. <br />
 e.g. <JavaRDD<String> distFile = jsc.textFile("hdfs://localhost:9000/user/suvasish/data.txt");> <br />
-$ hdfs dfs -mkdir /user/suvasish
-$ hdfs dfs -put /path/to/data.txt /user/suvasish/data.txt
+$ hdfs dfs -mkdir /user/suvasish <br />
+$ hdfs dfs -put /path/to/data.txt /user/suvasish/data.txt <br />
 
 ### Submit application on yarn
 $ spark-submit --class "BasicRDD" --master yarn --deploy-mode cluster target/simple-spark-1.0-SNAPSHOT.jar 
