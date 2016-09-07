@@ -43,7 +43,7 @@ $ /path-to-spark-home/bin/park-submit --class "SimpleApp" --master spark://suvas
 ### Set HADOOP_CONF_DIR
 $ export HADOOP_CONF_DIR=/path/to/hadoop/etc/hadoop
 
-### Start HADOOP & YARN daemons
+### Start Hadoop & Yarn daemons
 $ start-dfs.sh <br />
 $ start-yarn.sh
 
@@ -54,11 +54,11 @@ $ hdfs dfs -mkdir /user/suvasish <br />
 #### Put local file into hdfs
 $ hdfs dfs -put /path/to/data.txt /user/suvasish/data.txt <br />
 
-#### Change local path to hdfs path (typically hdfs://<namenode>:9000/path)
+#### Change local path to hdfs path in Java code (typically hdfs://<namenode>:9000/path)
 e.g. <JavaRDD<String> distFile = jsc.textFile("hdfs://localhost:9000/user/suvasish/data.txt");> <br />
 
 ### Submit application on yarn
-$ spark-submit --class "BasicRDD" --master yarn --deploy-mode cluster target/simple-spark-1.0-SNAPSHOT.jar 
+$ spark-submit --class "SparkSql" --master yarn --deploy-mode cluster target/simple-spark-1.0-SNAPSHOT.jar 
 
 ### Monitor
 - Namenode/Datanone - http://localhost:50070/
