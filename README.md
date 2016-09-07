@@ -35,3 +35,27 @@ $ /path-to-spark-home/sbin/start-slave.sh <master-spark-URL>
 $ /path-to-spark-home/bin/park-submit --class "SimpleApp" --master spark://suvasish-pc:6066 --deploy-mode "cluster" target/simple-spark-1.0-SNAPSHOT.jar
 
 <hr />
+
+## Run on YARN
+sic http://spark.apache.org/docs/latest/running-on-yarn.html
+
+### Set $HADOOP_CONF_DIR to /path/to/hadoop/etc/hadoop
+
+### Start HADOOP & YARN daemons
+$ start-dfs.sh
+$ start-yarn.sh
+
+Now upload the data.txt and ebay.csv into hdfs (for example within /user/suvasish) and update BasicRDD.java and SparkSql.java accordingly. Recomplile the project. <br />
+e.g. <JavaRDD<String> distFile = jsc.textFile("hdfs://localhost:9000/user/suvasish/data.txt");> <br />
+$ hdfs dfs -mkdir /user/suvasish
+$ hdfs dfs -put /path/to/data.txt /user/suvasish/data.txt
+
+### Submit application on yarn
+$ spark-submit --class "BasicRDD" --master yarn --deploy-mode cluster target/simple-spark-1.0-SNAPSHOT.jar 
+
+### Monitor
+- Namenode/Datanone - http://localhost:50070/
+- YARN cluster - http://suvasish-pc:8088/
+
+<hr />
+
