@@ -37,9 +37,9 @@ $ /path-to-spark-home/bin/park-submit --class "SimpleApp" --master spark://suvas
 <hr />
 
 ## Run on YARN
-[1] http://spark.apache.org/docs/latest/running-on-yarn.html
-[2] https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
-[3] https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/ClusterSetup.html
+[1] http://spark.apache.org/docs/latest/running-on-yarn.html <br />
+[2] https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html <br />
+[3] https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/ClusterSetup.html <br />
 
 ### Set $HADOOP_CONF_DIR
 $ export HADOOP_CONF_DIR=/path/to/hadoop/etc/hadoop
