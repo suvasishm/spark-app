@@ -12,7 +12,6 @@ export PATH=${PATH}:${JAVA_HOME}/bin
 # Build the App
 $ mvn clean package
 
-
 # Run the App
 
 ## Run on 'local' deploy mode
@@ -36,22 +35,27 @@ $ /path-to-spark-home/bin/park-submit --class "SimpleApp" --master spark://suvas
 
 <hr />
 
-## Run on YARN
+## Run on YARN alongside Hadoop
 [1] http://spark.apache.org/docs/latest/running-on-yarn.html <br />
 [2] https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html <br />
 [3] https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/ClusterSetup.html <br />
 
-### Set $HADOOP_CONF_DIR
+### Set HADOOP_CONF_DIR
 $ export HADOOP_CONF_DIR=/path/to/hadoop/etc/hadoop
 
 ### Start HADOOP & YARN daemons
 $ start-dfs.sh <br />
 $ start-yarn.sh
 
-###### Now upload the data.txt and ebay.csv into hdfs (for example within /user/suvasish) and update BasicRDD.java and SparkSql.java accordingly. Recomplile the project. <br />
-e.g. <JavaRDD<String> distFile = jsc.textFile("hdfs://localhost:9000/user/suvasish/data.txt");> <br />
+### Setup hadoop data for it to be accessed by the app
+#### Create appropriate path on hdfs
 $ hdfs dfs -mkdir /user/suvasish <br />
+
+#### Put local file into hdfs
 $ hdfs dfs -put /path/to/data.txt /user/suvasish/data.txt <br />
+
+#### Change local path to hdfs path (typically hdfs://<namenode>:9000/path)
+e.g. <JavaRDD<String> distFile = jsc.textFile("hdfs://localhost:9000/user/suvasish/data.txt");> <br />
 
 ### Submit application on yarn
 $ spark-submit --class "BasicRDD" --master yarn --deploy-mode cluster target/simple-spark-1.0-SNAPSHOT.jar 
